@@ -1,16 +1,24 @@
 <script setup>
-// import { RouterLink, RouterView } from 'vue-router'
+import { RouterLink, RouterView } from 'vue-router'
 import Header from './components/Header.vue'
+import GameCard from './components/GameCard.vue'
+
 </script>
 
 <template>
-  <div>
+  <div class="app">
     <Header />
+    <GameCard />
+    <RouterView />
   </div>
 
-  <RouterView />
+  
 </template>
 
 <style scoped>
-
+.app {
+  width: 100%;  
+  min-height: 100vh;
+  background: #272b30;
+}
 </style>

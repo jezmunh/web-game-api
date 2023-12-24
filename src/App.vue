@@ -8,7 +8,6 @@ import GameCard from './components/GameCard.vue'
 <template>
   <div class="app">
     <Header />
-    <GameCard />
     <RouterView />
   </div>
 

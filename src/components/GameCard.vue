@@ -18,7 +18,7 @@ defineProps({
 <template>
     <div>
         <img :src="game.thumbnail" />
-        <h1>Game</h1>
+        <h1>{{ game.title }}</h1>
         <p>
         {{ game.short_description}}
         </p>

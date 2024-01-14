@@ -30,10 +30,16 @@ const router = createRouter({
       component: () => import('../views/Royal.vue')
     },
     {
+      path: '/strategy',
+      name: 'strategy',      
+      component: () => import('../views/Strategy.vue')
+    },
+    {
       path: '/details/:id',
       name: 'details',      
       component: () => import('../views/Details.vue')
     },
+    
   ]
 })
 

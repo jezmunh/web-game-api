@@ -1,5 +1,14 @@
 <script setup>
-import GameCard from "../components/GameCard.vue"
+import GameCard from "../components/GameCard.vue";
+import * as api from "../api/api.js";
+import {onMounted, ref} from "vue";
+
+const games = ref()
+
+onMounted(async () => {
+    games.value = await api.GamesCategory("fantasy");
+    console.log(games.value);
+})
 </script>
 
 <template>
@@ -7,7 +16,7 @@ import GameCard from "../components/GameCard.vue"
         <section>
             <h1 class="title">Fantasy</h1>
             <div class="block">
-                <GameCard v-for="(item, index) in 3" :key="index" />
+                <GameCard v-for="(item, index) in games" :game="item" :key="index" />
             </div>
         </section>
     </div>
